@@ -1,0 +1,12 @@
+  GNU nano 6.2      /etc/systemd/system/gpu_status_conky.service                
+[Unit]
+Description=GPU Status Display with Conky
+After=graphical.target
+
+[Service]
+Type=simple
+User=USERNAME
+ExecStart=/usr/bin/conky -c /home/USERNAME/gpu_status_conky.conf
+
+[Install]
+WantedBy=graphical.target
